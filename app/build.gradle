@@ -3,6 +3,9 @@ plugins {
     id 'kotlin-android'
     id 'com.google.gms.google-services'  // Google Services plugin
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin") //
+    // Apply the Performance Monitoring plugin
+    id 'com.google.firebase.firebase-perf'
+    id 'com.google.firebase.crashlytics'
 }
 
 android {
@@ -54,8 +57,13 @@ dependencies {
     // Declare the dependency for the Firebase SDK for Google Analytics
     implementation 'com.google.firebase:firebase-analytics-ktx'
 
-    // Declare the dependencies for any other desired Firebase products
-    // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
-    implementation 'com.google.firebase:firebase-auth-ktx'
+    // Declare the dependency for the Cloud Firestore library
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+
+    // Declare the dependency for the Performance Monitoring library
+    implementation 'com.google.firebase:firebase-perf-ktx'
+
+    // Declare the dependencies for the Crashlytics libraries
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
 
 }
