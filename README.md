@@ -1,5 +1,10 @@
 # landmark-remark
 
+A simple mobile application – “Landmark Remark”
+that allows users to save location based notes on a map. These notes can be
+displayed on the map where they were saved and viewed by the user that
+created the note as well as other users of the application.
+
 ## BackLog
 
 - [x] As a user (of the application) I can see my current location on a map
@@ -25,21 +30,22 @@ Use ViewModel to store all the data that your Activity needs and LiveData to han
  - MVVM 
  - ViewModel
  - LiveData
- - Fragments
+ 
+ 
+## UI components and styling
+
+- Fragments
 
 ## Backend Integration 
-
-
 ### Map API
 
 ### Firebase Firestore
 
+## Logic and mechanism 
+
 
 
 ## Add-ons
-
-### UI-styling
-
 
 ### Localisation
 
