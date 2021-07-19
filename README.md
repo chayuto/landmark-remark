@@ -1,7 +1,7 @@
 # landmark-remark
 
 
-##BackLog
+## BackLog
 
 - [x] As a user (of the application) I can see my current location on a map
 - [ ] As a user I can save a short note at my current location
@@ -15,7 +15,7 @@
      user-name
 
 
-##Architecture Choice
+## Architecture Choice
 
 Use ViewModel to store all the data that your Activity needs and LiveData to handle communication
  between Activity and ViewModel
