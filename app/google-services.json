@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "811941032408",
+    "project_id": "landmark-remark-b2798",
+    "storage_bucket": "landmark-remark-b2798.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811941032408:android:c54a7a0824cafbc05cc2ad",
+        "android_client_info": {
+          "package_name": "me.chayut.landmarkremark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "811941032408-r6i1f5abj4ud2rk976e29aoqlc5u7bb5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO5CNJPG0PRay8t6-T7SnQi4KCb9p-0H4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "811941032408-r6i1f5abj4ud2rk976e29aoqlc5u7bb5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
