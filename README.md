@@ -1,6 +1,5 @@
 # landmark-remark
 
-
 ## BackLog
 
 - [x] As a user (of the application) I can see my current location on a map
@@ -15,11 +14,39 @@
      user-name
 
 
-## Architecture Choice
+## Architecture choice
 
 Use ViewModel to store all the data that your Activity needs and LiveData to handle communication
  between Activity and ViewModel
 
  The Activity is not fetching data directly but rather observing for data changes
  Data will survive configuration changes, a rotation won’t cause a new data fetch
+ 
+ - MVVM 
+ - ViewModel
+ - LiveData
+ - Fragments
+
+## Backend Integration 
+
+
+### Map API
+
+### Firebase Firestore
+
+
+
+## Add-ons
+
+### UI-styling
+
+
+### Localisation
+
+
+### Integration test
+
+### Misc.
+
+ - ic_launcher asset update  
 
