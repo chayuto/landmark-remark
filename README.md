@@ -32,6 +32,7 @@ Use ViewModel to store all the data that your Activity needs and LiveData to han
  - LiveData
  
  
+ 
 ## UI components and styling
 
 - Fragments
@@ -40,6 +41,7 @@ Use ViewModel to store all the data that your Activity needs and LiveData to han
 ### Map API
 
 ### Firebase Firestore
+
 
 ## Logic and mechanism 
 

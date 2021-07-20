@@ -18,6 +18,9 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.firebase.firestore.GeoPoint
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 private lateinit var fusedLocationClient: FusedLocationProviderClient
 private lateinit var locationCallback: LocationCallback
@@ -28,8 +31,6 @@ class MainActivity : AppCompatActivity() , OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
@@ -100,6 +101,54 @@ class MainActivity : AppCompatActivity() , OnMapReadyCallback {
         mapFragment.getMapAsync(this)
 
 
+        testFireStore()
+
+
+    }//end onCreate
+
+
+    fun testFireStore(){
+
+        Log.d(TAG, "testFireStore: ")
+
+        // Access a Cloud Firestore instance from your Activity
+        val db = Firebase.firestore
+
+
+        db.collection("landmarks")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    Log.d(TAG, "${document.id} => ${document.data}")
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.w(TAG, "Error getting documents.", exception)
+            }
+
+
+        // Create a new user with a first and last name
+        val newLandMark = hashMapOf(
+            "user-name" to "Chayut",
+            "location" to GeoPoint(
+                0.0,
+                0.0
+            ),
+            "note" to "hello",
+            "created_at" to System.currentTimeMillis()/1000,
+            "updated_at" to System.currentTimeMillis()/1000
+        )
+
+
+        // Add a new document with a generated ID
+        db.collection("landmarks")
+            .add(newLandMark)
+            .addOnSuccessListener { documentReference ->
+                Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+            }
+            .addOnFailureListener { e ->
+                Log.w(TAG, "Error adding document", e)
+            }
 
     }
 
